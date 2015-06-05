@@ -1,31 +1,27 @@
-/* Rank - 177
-   Runtime - 0.001 */
+/* Rank - 173
+   Runtime - 0.000 */
 #include <stdio.h>
-long long rev(long long n) {
-	long long new=0, r;
-	while( n!=0 ) {
-		r = n%10;
-		n = n/10;
-		new *= 10;
-		new += r;
-	}
-	return new;
-}
-
 int main() {
-	long long T, num, temp, pal, count;
+	long long T, num, pal, count, n, rev, r;
 	scanf("%lld", &T);
 	while( T-- ) {
 		scanf("%lld", &num);
 		pal = 1;
 		count = -1;
 		while( pal != 0 ) {
-			temp = rev(num);
-			pal = num - temp;
-			num += temp;
+			n = num;
+			rev = 0;
+			while( n!=0 ) {
+				r = n%10;
+				n = n/10;
+				rev *= 10;
+				rev += r;
+			}
+			pal = num - rev;
+			num += rev;
 			count++;
 		}
-		printf("%lld %lld\n", count, temp);
+		printf("%lld %lld\n", count, rev);
 	}
 	return 0;
 }
