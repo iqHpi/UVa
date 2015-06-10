@@ -25,4 +25,4 @@ int main(){
 		printf("%d\n", pos);
 	}
 	return 0;
-}
+} 
