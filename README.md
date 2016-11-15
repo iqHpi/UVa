@@ -1,3 +1,3 @@
-# UVa
-Here you may find sollutions of some interesting problems of UVa. Please try to slove the problems by yourself then see my code.
-- Shajol :)
+UVa Online Judge doesn't keep my codes. So the codes are lost after a while. And after couple of months, when I see an old "AC" problem, I have no clues how the heck I solved that problem! So I decided to store my solutions here. In the memories of my lost codes...
+
+EOF
