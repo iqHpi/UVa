@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(void){
-	freopen("file.in", "r", stdin);
+	//freopen("file.in", "r", stdin);
 	//freopen("file.out", "w", stdout);
 	double cost[1010], given, taken, avg;
 	int student;
