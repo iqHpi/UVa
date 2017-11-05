@@ -8,11 +8,11 @@ int main(){
     
     bool notPrime[1000000] = {};
     for( int i = 2; i<1001; i++){
-		if( !notPrime[i] ){
-			for( int j = i+i; j<1000000; j+=i ) notPrime[j] = true;
-		}
+	if( !notPrime[i] ){
+	    for( int j = i+i; j<1000000; j+=i ) notPrime[j] = true;
+	}
     }
-	notPrime[0] = notPrime[1] = true;
+    notPrime[0] = notPrime[1] = true;
 	
     while( ~scanf("%s", str) ){
         num = rev = 0;
@@ -21,7 +21,7 @@ int main(){
             rev += (str[i] - '0') * dec[i];
             num += (str[j] - '0') * dec[i];
         }
-		//nice. no?
+	//nice. no?
 		
         if( notPrime[num] ) printf("%d is not prime.\n", num);
         else{
