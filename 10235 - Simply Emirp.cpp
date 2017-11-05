@@ -11,16 +11,18 @@ int main(){
 		if( !notPrime[i] ){
 			for( int j = i+i; j<1000000; j+=i ) notPrime[j] = true;
 		}
-	}notPrime[0] = notPrime[1] = true;
+    }
+	notPrime[0] = notPrime[1] = true;
 	
     while( ~scanf("%s", str) ){
         num = rev = 0;
-        int len = strlen( str ); //nice. no?
+        int len = strlen( str ); 
         for( int i = 0, j = len - 1; i < len; i++, j-- ){
             rev += (str[i] - '0') * dec[i];
             num += (str[j] - '0') * dec[i];
         }
-
+		//nice. no?
+		
         if( notPrime[num] ) printf("%d is not prime.\n", num);
         else{
             if( num == rev || notPrime[rev] ) printf("%d is prime.\n", num);
